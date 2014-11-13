@@ -110,7 +110,7 @@
     CGFloat _anchorRightRevealAmount;
     UIPanGestureRecognizer *_panGesture;
     UITapGestureRecognizer *_resetTapGesture;
-                                                           
+														   
     @protected
     UIViewController *_topViewController;
     UIViewController *_underLeftViewController;
@@ -193,6 +193,20 @@
  */
 @property (nonatomic, assign) CGFloat anchorRightRevealAmount;
 
+/**
+ Activate/Deactivate shadow effect. Usefull for default transition with both views with the same background
+ 	color. YES by default.
+
+ @see useShadow
+ */
+@property (nonatomic, assign) BOOL useShadow;
+
+/**
+ Shadow background color if useShadow is YES. Black color by default.
+
+ @see shadowColor
+ */
+@property (nonatomic, assign) UIColor *shadowColor;
 
 ///---------------------------
 /// @name Moving the Top Layer
